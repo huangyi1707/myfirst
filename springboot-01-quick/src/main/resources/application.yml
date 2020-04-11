@@ -1,0 +1,28 @@
+#Person:
+#  age: 18
+#  boss: false
+#  birthday: 2020/2/11
+#  map: {k1: v1,k2: v2}
+#  list:
+#    - lisi
+#    - wangwu
+#  dog:
+#    d_name: wangcai
+#    age: 10
+#  p_name: wanger
+server:
+  port: 8080
+spring:
+  profiles:
+    active: dev #指定的文档部分
+#    ---为文档分隔符，将yml分为不同的部分
+---
+server:
+  port: 8081
+spring:
+  profiles: dev
+---
+server:
+  port: 8082
+spring:
+  profiles: prod
